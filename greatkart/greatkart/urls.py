@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views
 
+
+
+# Below is the url pattern which routes the UI to the view it seems 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", views.home, name='home')
 ]
